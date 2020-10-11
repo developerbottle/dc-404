@@ -21,7 +21,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  verticaalign: baseline;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -94,6 +94,7 @@ button, select, input, textarea {
 /* CSS variables */
 :root {
   --color-primary: #4f4f4f;
+  --color-secondary: #ff6d5b;
   --color-dark: #333333;
   --color-light: #ffffff;
 
@@ -113,6 +114,8 @@ button, select, input, textarea {
   --letter-spacing-normal: 0;
   --letter-spacing-tight: -0.168rem;
   --letter-spacing-tighter: -0.192rem;
+
+  --transition-duration: 200ms;
 }
 
 /* Base styles */
@@ -128,6 +131,10 @@ body {
   body {
     font-size: var(--font-size-lg);
   }
+}
+
+:focus {
+  outline: 0.3rem solid var(--color-secondary);
 }
 
 /* Blocks */
@@ -146,6 +153,12 @@ body {
 
 .link {
   text-decoration: underline;
+
+  transition: color var(--transition-duration);
+}
+
+.link:hover, .link:active {
+  color: var(--color-secondary);
 }
 
 .logo {
@@ -167,6 +180,12 @@ body {
   text-transform: uppercase;
 
   background-color: var(--color-dark);
+
+  transition: background-color var(--transition-duration);
+}
+
+.button:hover, .button:active {
+  background-color: var(--color-secondary);
 }
 
 .header {
