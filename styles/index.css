@@ -101,6 +101,7 @@ button, select, input, textarea {
   --font-family-primary: 'Inconsolata', monospace;
   --font-family-secondary: 'Montserrat', sans-serif;
 
+  --font-size-2xl: 6.4rem;
   --font-size-xl: 4.8rem;
   --font-size-lg: 2.4rem;
   --font-size-md: 1.8rem;
@@ -112,8 +113,6 @@ button, select, input, textarea {
   --letter-spacing-normal: 0;
   --letter-spacing-tight: -0.168rem;
   --letter-spacing-tighter: -0.192rem;
-
-  --breakpoint-desktop: 1440px;
 }
 
 /* Base styles */
@@ -125,6 +124,12 @@ body {
   letter-spacing: var(--letter-spacing-normal);
 }
 
+@media screen and (min-width: 90rem) {
+  body {
+    font-size: var(--font-size-lg);
+  }
+}
+
 /* Blocks */
 .title {
   color: var(--color-dark);
@@ -133,11 +138,18 @@ body {
   letter-spacing: var(--letter-spacing-tight);
 }
 
+@media screen and (min-width: 90rem) {
+  .title {
+    font-size: var(--font-size-2xl);
+  }
+}
+
 .link {
   text-decoration: underline;
 }
 
 .logo {
+  color: var(--color-dark);
   font-family: var(--font-family-primary);
   font-weight: 700;
   font-size: var(--font-size-lg);
@@ -158,8 +170,16 @@ body {
 }
 
 .header {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  --header-v-padding: 2rem;
+
+  padding-top: var(--header-v-padding);
+  padding-bottom: var(--header-v-padding);
+}
+
+@media screen and (min-width: 90rem) {
+  .header {
+    --header-v-padding: 4rem;
+  }
 }
 
 .footer {
@@ -181,13 +201,20 @@ body {
   padding-right: var(--container-gutter);
 }
 
+@media screen and (min-width: 90rem) {
+  .container {
+    --container-max-width: 144rem;
+    --container-gutter: 8rem;
+  }
+}
+
 .page {
   display: flex;
   flex-direction: column;
 }
 
 .page__header {
-  margin-bottom: 6.4rem;
+  margin-bottom: 4.4rem;
 }
 
 .page__body {
@@ -198,13 +225,22 @@ body {
   margin-top: 5.4rem;
 }
 
+@media screen and (min-width: 90rem) {
+  .page__header {
+    margin-bottom: 16rem;
+  }
+}
+
 .hero {
   display: flex;
   flex-direction: column;
 }
 
 .hero__image {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 6rem;
+  width: 28.5rem;
 }
 
 .hero__body {
@@ -219,6 +255,31 @@ body {
 }
 
 .hero__button {
+}
+
+@media screen and (min-width: 90rem) {
+  .hero {
+    flex-direction: row;
+  }
+
+  .hero__image {
+    align-self: flex-start;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 12rem;
+    width: 54rem;
+  }
+
+  .hero__title {
+    margin-bottom: 3.6rem;
+    max-width: 60rem;
+  }
+
+  .hero__description {
+    margin-bottom: 6.4rem;
+    max-width: 40rem;
+  }
 }
 
 /* Utilities */
