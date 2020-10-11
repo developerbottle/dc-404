@@ -127,7 +127,7 @@ body {
   letter-spacing: var(--letter-spacing-normal);
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 80rem) {
   body {
     font-size: var(--font-size-lg);
   }
@@ -145,7 +145,7 @@ body {
   letter-spacing: var(--letter-spacing-tight);
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 80rem) {
   .title {
     font-size: var(--font-size-2xl);
   }
@@ -195,7 +195,7 @@ body {
   padding-bottom: var(--header-v-padding);
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 80rem) {
   .header {
     --header-v-padding: 4rem;
   }
@@ -220,7 +220,7 @@ body {
   padding-right: var(--container-gutter);
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 80rem) {
   .container {
     --container-max-width: 144rem;
     --container-gutter: 8rem;
@@ -244,7 +244,7 @@ body {
   margin-top: 5.4rem;
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 80rem) {
   .page__header {
     margin-bottom: 16rem;
   }
@@ -276,7 +276,7 @@ body {
 .hero__button {
 }
 
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 80rem) {
   .hero {
     flex-direction: row;
   }
