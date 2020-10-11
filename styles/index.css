@@ -211,7 +211,7 @@ body {
 
 .container {
   --container-gutter: 2.4rem;
-  --container-max-width: 40rem;
+  --container-max-width: 60rem;
 
   margin: 0 auto;
   width: 100%;
